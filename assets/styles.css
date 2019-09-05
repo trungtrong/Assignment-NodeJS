@@ -1,0 +1,62 @@
+*, *::after, *::before  {
+    box-sizing: border-box;
+}
+
+body{
+    background: #0d1521;
+    font-family: Arial, sans-serif;
+    color: #989898;
+}
+
+div.container {
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    border: 1px solid #989898;
+    border-radius: 5px;
+}
+
+p.requirement {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+div.example p {
+    padding: 5px;
+    margin: 0 10px;
+    font-size: 12px;
+
+}
+
+div.example {
+    margin-bottom: 10px;
+}
+
+div.form-group {
+    margin-bottom: 10px;
+}
+
+input.form-control {
+    border: 1px solid #989898;
+    border-radius: 2px;
+    width: 70%;
+    height: 25px;
+    font-size: 16px;
+}
+
+button.btn {
+    background: #989898;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 40px;
+
+    font-size: 18px;
+}
+
+span.help-block {
+    color: red;
+}

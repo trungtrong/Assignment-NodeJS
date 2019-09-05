@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bai 04 Serving HTML Pages</title>
+<!-- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/> -->
+
+	<link rel="stylesheet" type="text/css" href="../assets/styles.css"/>
+</head>
+<body>
+	<div class="container">
+		<p class="requirement">Please provide 2 set of numbers. Each set has a list of numbers separated by comma.</p>
+		<p class="requirement">Compares the 2 sets and return the numbers that are unique to each set.</p>
+
+		<div class="example">For example:
+			<p>Set 1: 1,3,4,5</p>
+			<p>Set 2: 2,3,5,6,7</p>
+			<p>Differences: 1,2,6,7</p>
+		</div>
+
+	<form id="form" method="POST" action="/">
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="set1" class="control-label">
+					Set 1
+				</label> 
+				<input type="text" name="set1" class="form-control"
+					value="<%= data.set1 %>" />
+				<p> <% if(error.set1 === true) { %>
+					<span class="help-block">
+						Set 1 is invalid
+					</span>
+				<% } %>
+				</p>
+			<% error.set1 %>
+			<% error.set2 %>
+			</div>
+
+			<div class="form-group">
+				<label for="set2" class="control-label">
+					Set 2 
+				</label>
+				<input type="text" name="set2" class="form-control"
+					value="<%= data.set2 %>" />
+				<p> <% if(error.set2 === true) { %>
+					<span class="help-block">
+						Set 2 is invalid
+					</span>
+				<% } %>
+				</p>			
+			</div>
+		</div>
+		
+		<div class="panel-footer">
+      <button type="submit" class="btn">
+          Submit
+      </button>
+      <p><% if(data.differences && error.set1 === false && error.set2 === false)  { %>
+				<span>Differences: "<%= data.differences %>" </span>
+				<% } %>
+			</p>
+    </div>
+	</form>
+	</div>
+
+</body>
+</html>
